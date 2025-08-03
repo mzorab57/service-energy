@@ -9,7 +9,7 @@ const MenuItem = ({ item }) => {
     <li className="relative group">
       {item.children ? (
         <>
-          <span className="cursor-pointer flex items-center px-4 hover:text-indigo-600">
+          <span className="cursor-pointer flex items-center px-4 hover:text-primary">
             {t(`nav.${item.title.toLowerCase()}`)}
             <svg
               className="w-4 h-4 ml-2"
@@ -25,21 +25,21 @@ const MenuItem = ({ item }) => {
               />
             </svg>
           </span>
-          <ul className="hidden group-hover:block absolute left-0 w-48 bg-white shadow-lg rounded-md py-2">
+          {/* <ul className="hidden  group-hover:block absolute left-0 w-48 bg-white shadow-lg rounded-md py-2">
             {item.children.map((child) => (
               <li key={child.key}>
                 <Link
                   to={child.link}
-                  className="block px-4 py-2 text-sm hover:text-indigo-600 hover:bg-gray-50"
+                  className="block px-4 py-2 text-sm hover:text-primaryLi hover:bg-gray-50"
                 >
                   {t(`nav.${child.title}`)}
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </>
       ) : (
-        <Link to={item.link} className="block px-4 hover:text-indigo-600">
+        <Link to={item.link} className="block px-4 font-bold uppercase text-lg text-slate-300 hover:text-primary">
           {t(`nav.${item.title.toLowerCase()}`)}
         </Link>
       )}

@@ -9,25 +9,8 @@
       "link": "/about"
     },
     {
-      "title": "Pages",
-      "link": "#",
-      "children": [
-        {
-          "title": "Matt School",
-          "link": "/pages/mattschool",
-          "key": "mattschool"
-        },
-        {
-          "title": "Matt Furnishing",
-          "link": "/pages/mattfurnishing",
-          "key": "mattfurnishing"
-        },
-        {
-          "title": "Matt Model",
-          "link": "/pages/mattmodel",
-          "key": "mattmodel"
-        }
-      ]
+      "title": "Service",
+      "link": "/service"
     },
     {
       "title": "Contact",

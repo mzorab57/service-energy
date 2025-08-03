@@ -4,7 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 // Main Layouts
 import Main from "../components/layouts/Main";
 // Pages
-import Home from "../pages/Home";
+import Hero from "../components/hero/Hero";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import MattSchool from "../pages/pages/MattSchool";
@@ -12,6 +12,8 @@ import MattFurnishing from "../pages/pages/MattFurnishing";
 import MattModel from "../pages/pages/MattModel";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+
 
 
 const ErrorElement = () => (
@@ -48,7 +50,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Main />}>
-        <Route index element={<Home />} />
+        <Route index element={<Hero />} />
         <Route path="about" element={<About />} />
         <Route path="pages">
           <Route path="mattschool" element={<MattSchool />} />
@@ -63,3 +65,4 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+

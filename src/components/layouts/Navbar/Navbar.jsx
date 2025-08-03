@@ -29,14 +29,14 @@ const Navbar = () => {
 
   return (
     <nav  className={`fixed w-full z-50  transition-all duration-300 ${
-        isSticky ? "shadow-md bg-black/50 text-white" : "bg-transparent"
+        isSticky ? "" : "bg-transparent"
       }`}>
         
-      <div className="container mx-auto px-4">
+      <div className="container rounded  border-t-0 border border-primaryLighter  bg-primaryLighter/50  mx-auto px-2 shadow-lg backdrop-blur-md text-white ">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/service_logo.png" alt="Logo" className="h-8 w-auto" />
+            <img src="/service_logo.png" alt="Logo" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

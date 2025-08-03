@@ -1,0 +1,99 @@
+/* Custom animations for Hero section */
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-x-12 {
+  transform: rotateX(12deg);
+}
+
+.rotate-y-12 {
+  transform: rotateY(12deg);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotateY(5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotateY(-5deg);
+  }
+}
+
+.solar-panel {
+  transform-style: preserve-3d;
+}
+
+.solar-panel-container {
+  transform-style: preserve-3d;
+}
+
+/* Enhanced glow effects */
+.solar-panel::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #5188be, #3b82f6);
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.3;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+/* Energy particle trails */
+.energy-particle {
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: radial-gradient(circle, #fbbf24 0%, transparent 70%);
+  border-radius: 50%;
+  animation: particle-float 4s linear infinite;
+}
+/* Energy particle trails */
+.number-hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(77, 166, 255, 0.3);
+  border-color: rgba(77, 166, 255, 0.5);
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(100px) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0;
+  }
+}
