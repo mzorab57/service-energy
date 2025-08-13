@@ -5,13 +5,20 @@ import { Routes, Route, Link } from "react-router-dom";
 import Main from "../components/layouts/Main";
 // Pages
 import Hero from "../components/hero/Hero";
-import About from "../pages/About";
+import About from "../pages/AboutPage";
 import Contact from "../pages/Contact";
-import MattSchool from "../pages/pages/MattSchool";
-import MattFurnishing from "../pages/pages/MattFurnishing";
-import MattModel from "../pages/pages/MattModel";
+// import MattSchool from "../pages/pages/MattSchool";
+// import MattFurnishing from "../pages/pages/MattFurnishing";
+// import MattModel from "../pages/pages/MattModel";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AboutUs from "../components/aboutUs/AboutUs";
+import Service from "../pages/Service";
+import ContactPage from "../pages/ContactPage";
+import ProjectSection from "../components/project/ProjectSection";
+import AboutPage from "../pages/AboutPage";
+import ServicesPage from "../pages/ServicePage";
+import ProjectsPage from "../pages/ProjectPage";
 
 
 
@@ -50,14 +57,17 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Main />}>
-        <Route index element={<Hero />} />
-        <Route path="about" element={<About />} />
-        <Route path="pages">
+        <Route index element={<><Hero /><AboutUs /><ProjectSection /> <Service /> </>} />
+
+        <Route path="about" element={<AboutPage />} />
+        <Route path="service" element={<ServicesPage />} />
+        <Route path="project" element={<ProjectsPage />} />
+        {/* <Route path="pages">
           <Route path="mattschool" element={<MattSchool />} />
           <Route path="mattfurnishing" element={<MattFurnishing />} />
           <Route path="mattmodel" element={<MattModel />} />
-        </Route>
-        <Route path="contact" element={<Contact />} />
+        </Route> */}
+        {/* <Route path="contact" element={<Contact />} /> */}
       </Route>
       <Route path="*" element={<ErrorElement />} />
     </Routes>

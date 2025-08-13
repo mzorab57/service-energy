@@ -13,6 +13,10 @@
       "link": "/service"
     },
     {
+      "title": "project",
+      "link": "/project"
+    },
+    {
       "title": "Contact",
       "link": "/contact"
     }

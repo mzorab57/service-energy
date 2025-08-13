@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MenuItem from "./components/MenuItem";
 import MobileMenuItem from "./components/MobileMenuItem";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import ThemeSwitcher from "../../ui/ThemeSwitcher";
 import navitemlist from "../../../dataJson/navitemlist.json";
 
 const Navbar = () => {
@@ -28,11 +29,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav  className={`fixed w-full z-50  transition-all duration-300 ${
+    <nav  className={`fixed w-full z-50   transition-all duration-300 ${
         isSticky ? "" : "bg-transparent"
       }`}>
         
-      <div className="container rounded  border-t-0 border border-primaryLighter  bg-primaryLighter/50  mx-auto px-2 shadow-lg backdrop-blur-md text-white ">
+      <div className="container bg-primaryLighter/40 border-primary/30 rounded border-t-0 border border-theme-primary/50 bg-theme-primary/30 mx-auto px-2 shadow-lg backdrop-blur-md text-white transition-colors duration-300">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -48,8 +49,11 @@ const Navbar = () => {
             </ul>
           </nav>
 
-          <div className="flex">
-            {/* langyage Info */}
+          <div className="flex items-center space-x-3">
+            {/* Theme Switcher */}
+            <ThemeSwitcher />
+            
+            {/* Language Switcher */}
             <LanguageSwitcher />
 
             {/* Mobile Menu Button */}

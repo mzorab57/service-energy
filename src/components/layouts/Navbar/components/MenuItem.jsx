@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+// import { log } from "three/tsl";
 
 const MenuItem = ({ item }) => {
   const { t } = useTranslation();
+  console.log(item);
 
   return (
     <li className="relative group">
       {item.children ? (
         <>
-          <span className="cursor-pointer flex items-center px-4 hover:text-primary">
+          <span className="cursor-pointer flex items-center px-4 hover:text-theme-primary-light transition-colors duration-200">
             {t(`nav.${item.title.toLowerCase()}`)}
             <svg
               className="w-4 h-4 ml-2"
@@ -39,7 +41,8 @@ const MenuItem = ({ item }) => {
           </ul> */}
         </>
       ) : (
-        <Link to={item.link} className="block px-4 font-bold uppercase text-lg text-slate-300 hover:text-primary">
+
+        <Link to={item.link} className="block px-4 font-bold uppercase text-lg text-white hover:text-theme-primary-light transition-colors duration-200">
           {t(`nav.${item.title.toLowerCase()}`)}
         </Link>
       )}

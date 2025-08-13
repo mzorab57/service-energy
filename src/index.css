@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Default theme variables */
+:root {
+  --color-primary: #3765B5;
+  --color-primaryLight: #648CC4;
+  --color-background: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-text: #1E293B;
+  --color-textSecondary: #64748B;
+  --color-border: #E2E8F0;
+}
+
 @keyframes lineMove {
   0% {
     transform: translateY(6100%);
