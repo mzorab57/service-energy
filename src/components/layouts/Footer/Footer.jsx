@@ -54,7 +54,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-lg">
-                      +964 750 123 4567
+                      +964 773 439 3298
                     </p>
                     <p className="text-gray-400 text-sm">
                       24/7 Support Available
@@ -80,7 +80,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-lg">
-                      info@serviceenergy.com
+                      info@serviceenergy-iq.com
                     </p>
                     <p className="text-gray-400 text-sm">
                       Get Free Consultation
@@ -112,7 +112,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-lg">
-                      Kurdistan Region, Iraq
+                      Kurdistan Region, Iraq, Erbil
                     </p>
                     <p className="text-gray-400 text-sm">Serving All Regions</p>
                   </div>

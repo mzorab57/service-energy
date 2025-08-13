@@ -7,8 +7,6 @@ const ProjectPage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [filter, setFilter] = useState('all');
 
-
-
   const projects = [
     {
       id: 1,

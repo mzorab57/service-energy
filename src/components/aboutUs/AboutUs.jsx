@@ -1,22 +1,23 @@
 import React from "react";
 import AnimatedComponent from "../ui/AnimatedComponent";
+import UnderLine from "../ui/UnderLine";
 
 const AboutUs = () => {
   const stats = [
-    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Projects Completed" },
     { number: "15+", label: "Years Experience" },
     { number: "50+", label: "Expert Engineers" },
     { number: "100%", label: "Client Satisfaction" },
   ];
   return (
-    <div className="min-h-screen relative py-20 ">
+    <div className="min-h-screen relative py-20 overflow-hidden">
       <img
         src="/assets/images/cloud-video.webp"
         alt="background image"
-        className="absolute -top-6 z-20 object-cover opacity-60 w-full h-56 rotate-180 brightness-50"
+        className="absolute -top-6 z-20 object-cover opacity-60 w-full h-56 rotate-180 brightness-50 "
       />
       <div className="h-24 absolute -top-6 w-full backdrop-blur-md  z-10"></div>
-      <div className="h-20 absolute -top-6 w-full bg-gradient-to-b from-black/50 via-black/10 to-transparent  z-50"></div>
+      <div className="h-24 absolute -top-6 w-full bg-gradient-to-b from-black/50 via-black/10 to-transparent  z-20"></div>
 
       <div className="mb-16">
        
@@ -104,12 +105,12 @@ const AboutUs = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                Who We{" "}
+                Who
                 <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-                  Are
+                  We Are
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+              <UnderLine />
             </div>
 
             {/* Main Content */}
@@ -175,10 +176,10 @@ const AboutUs = () => {
                       {stats.map((stat, index) => (
                         <div
                           key={index}
-                          className="group relative bg-blue-500/10 rounded-2xl p-6 hover:bg-blue-500/20 transition-all duration-500 hover:scale-105"
+                          className="group relative bg-blue-500/10 rounded-2xl p-4 lg:p-6 hover:bg-blue-500/20 transition-all duration-500 hover:scale-105"
                         >
                           <div className="text-center">
-                            <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-2">
+                            <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-2 pr-5">
                               {stat.number}
                             </div>
                             <div className="text-sm text-gray-300">

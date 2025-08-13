@@ -51,6 +51,7 @@ const MobileMenuItem = ({
           <ul className="bg-gradient-to-b from-gray-50 to-white py-2 border-l-4 border-primary-200">
             {item.children.map((child, index) => (
               <li 
+              
                 key={child.title}
                 className="transform transition-all duration-200"
                 style={{
@@ -60,7 +61,7 @@ const MobileMenuItem = ({
                 <Link
                   to={child.link}
                   className=" px-8 py-3 text-gray-600 hover:text-primary-700 hover:bg-primary-50 hover:border-l-4 hover:border-primary-400 hover:pl-7 transition-all duration-200 flex items-center justify-between group"
-                  onClick={onClose}
+                  onClick={()=> {window.scrollTo(0, 0); onClose();}}
                 >
                   <span className="font-medium">{child.title}</span>
                   <svg
@@ -84,9 +85,10 @@ const MobileMenuItem = ({
       </div>
     ) : (
       <Link
+      
         to={item.link}
         className=" px-6 py-4 text-gray-200  font-semibold text-base group flex items-center justify-center"
-        onClick={onClose}
+         onClick={()=> {window.scrollTo(0, 0); onClose();}}
       >
         <span>{item.title}</span>
         <svg

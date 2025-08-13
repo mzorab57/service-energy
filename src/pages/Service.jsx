@@ -5,6 +5,7 @@ import { GiElectricalResistance } from "react-icons/gi";
 import { useLocation } from "react-router-dom";
 import { TbTransform } from "react-icons/tb";
 import AnimatedComponent from "../components/ui/AnimatedComponent";
+import UnderLine from "../components/ui/UnderLine";
 const Service = () => {
   const location = useLocation();
   //  https://crownsolarenergy.com/assets/images/home/solarLayer1.webp
@@ -118,9 +119,7 @@ const Service = () => {
           <AnimatedComponent>
             <div class="services-header">
               <h2 class="services-title">Professional Services</h2>
-              <div class="services-subtitle">
-                Advanced technology solutions for all energy needs
-              </div>
+             <UnderLine />
                <div className="w-24 h-1  mx-auto mt-2"></div>
               <div class="title-underline"></div>
             </div>

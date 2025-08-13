@@ -8,12 +8,13 @@ import AnimatedComponent from "../ui/AnimatedComponent";
 // CSS-based Solar Panel Component
 const SolarPanelDisplay = () => {
   return (
-    <div className="relative w-full h-full flex items-center justify-center ">
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+
       <AnimatedComponent>
-      <div className="solar-panel-container transform-gpu perspective-1000">
+      <div className="solar-panel-container transform perspective-1000">
         <div className="solar-panel animate-float">
           {/* Main Solar Panel */}
-          <div className="relative w-96 lg:w-[40rem]  h-48 lg:h-80 bg-gradient-to-br from-primaryLighter to-gray-900 rounded-lg shadow-2xl border-4 border-primaryLighter transform rotate-x-12 rotate-y-12">
+          <div className="relative px-3  w-80 md:w-[30rem]  xl:w-[40rem]  h-48 lg:h-80 bg-gradient-to-br from-primaryLighter to-gray-900 rounded-lg shadow-2xl border-4 border-primaryLighter transform rotate-x-12 rotate-y-12">
             {/* Solar Cells Grid */}
             <div className="absolute inset-2 grid grid-cols-6 gap-1">
               {Array.from({ length: 24 }, (_, i) => (
@@ -66,16 +67,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className=" relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 pb-6">
+    <div className=" relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900  ">
              {/* <img src="/assets/images/cloud-video.webp" alt="background image" className='absolute -bottom-10  z-50 object-cover opacity-50 w-full brightness-50' /> */}
       <div className="container mx-auto px-2">
         {/* Lightning Background */}
         <div 
         
-        className="absolute z-0 inset-0 w-full h-full ">
+        className="absolute z-0 inset-0 w-full h-full overflow-hidden">
+
           <Lightning
             hue={220}
-            xOffset={0.3}
+            xOffset={0.6}
             speed={0.5}
             intensity={0.5}
             size={1}
@@ -95,53 +97,33 @@ const Hero = () => {
                   : "translate-y-10 opacity-0"
               }`}
             >
-              <h1 className=" text-5xl lg:text-9xl  font-bold text-white mb-6 leading-tight g-gradient-to-r from-white via-primary to-primary bg-clip-text text-transparent drop-shadow-2xl">
+              <h1 className=" text-5xl lg:text-9xl  font-bold text-white  leading-tight g-gradient-to-r from-white via-primary to-primary bg-clip-text text-transparent drop-shadow-2xl">
                 <span className="bg-gradient-to-r  from-white via-primaryLighter to-primary bg-clip-text text-transparent drop-shadow-2xl">
                   Service Energy
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 mb-6 leading-relaxed">
+              <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 my-2 leading-relaxed">
                 Powering Tomorrow with Clean Solar Solutions
               </p>
-              {/* <p className="text-base sm:text-lg text-blue-200 mb-8 max-w-xl mx-auto lg:mx-0">
-              Transform your energy future with our cutting-edge solar technology. 
-              Sustainable, efficient, and designed for the next generation.
-            </p> */}
-
-              {/* CTA Buttons */}
-              {/* <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-white to-white text-black font-semibold rounded-full hover:from-white hover:to-white transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
-              >
-                Get Free Quote
-              </Link>
-              <Link 
-                to="/service" 
-                className="px-8 py-4 border-2 border-blue-300 text-blue-100 font-semibold rounded-full hover:bg-blue-300 hover:text-blue-900 transform hover:scale-105 transition-all duration-300 text-center"
-              >
-                Our Services
-              </Link>
-            </div> */}
+             
 
               {/* Energy Stats */}
-              <div className="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 ">
+              <div className="grid grid-cols-3 gap-4 text-center max-w-md mx-auto lg:mx-0 px-2 ">
                 <div
-              
-                 className="service-card bg-primary/80 ">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-300">
+                 className=" p-2 rounded  bg-primary/80 ">
+                  <div className="text-xl sm:text-3xl font-bold text-blue-300">
                     500+
                   </div>
                   <div className="text-sm text-blue-200">Projects</div>
                 </div>
-                <div className="service-card bg-primary/80">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-300">
+                <div className="p-2 rounded bg-primary/80">
+                  <div className="text-xl sm:text-3xl font-bold text-blue-300">
                     95%
                   </div>
                   <div className="text-sm text-blue-200">Efficiency</div>
                 </div>
-                <div className="service-card bg-primary/80">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-300">
+                <div className="p-2 rounded bg-primary/80">
+                  <div className="text-xl sm:text-3xl font-bold text-blue-300">
                     24/7
                   </div>
                   <div className="text-sm text-blue-200">Support</div>
@@ -151,7 +133,7 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Solar Panel Display */}
-          <div className=" h-80 sm:h-96 lg:h-[500px] xl:h-[600px] max-w-2xl w-full">
+          <div className=" h-80 sm:h-96 lg:h-[500px]  max-w-2xl w-full ">
             <SolarPanelDisplay />
           </div>
         </div>

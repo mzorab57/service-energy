@@ -42,7 +42,8 @@ const MenuItem = ({ item }) => {
         </>
       ) : (
 
-        <Link to={item.link} className="block px-4 font-bold uppercase text-lg text-white hover:text-theme-primary-light transition-colors duration-200">
+        <Link onClick={()=> window.scrollTo(0, 0)} to={item.link} className="block px-4 font-bold uppercase text-lg text-white hover:text-theme-primary-light transition-colors duration-200">
+
           {t(`nav.${item.title.toLowerCase()}`)}
         </Link>
       )}

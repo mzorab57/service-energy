@@ -44,7 +44,7 @@ const ErrorElement = () => (
 
 const AppRoutes = () => {
 
-    useEffect(() => {
+  useEffect(() => {
     AOS.init({
       once: false, // Ensure the animation triggers every time it scrolls back into view
       duration: 800, // Animation duration

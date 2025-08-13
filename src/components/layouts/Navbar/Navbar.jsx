@@ -33,11 +33,11 @@ const Navbar = () => {
         isSticky ? "" : "bg-transparent"
       }`}>
         
-      <div className="container bg-primaryLighter/40 border-primary/30 rounded border-t-0 border border-theme-primary/50 bg-theme-primary/30 mx-auto px-2 shadow-lg backdrop-blur-md text-white transition-colors duration-300">
+      <div className="container bg-primaryLighter/40 border-primary/30  border-t-0 border-l-0 border-r-0   border border-theme-primary/50 bg-theme-primary/30 mx-auto px-2 shadow-lg backdrop-blur-md text-white transition-colors duration-300">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src="/service_logo.png" alt="Logo" className="h-12 w-auto" />
+          <Link to="/" className="flex justify-center items-center pt-1">
+            <img src="/service_logo.png" alt="Logo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,10 +51,10 @@ const Navbar = () => {
 
           <div className="flex items-center space-x-3">
             {/* Theme Switcher */}
-            <ThemeSwitcher />
+            {/* <ThemeSwitcher /> */}
             
             {/* Language Switcher */}
-            <LanguageSwitcher />
+            {/* <LanguageSwitcher /> */}
 
             {/* Mobile Menu Button */}
             <button
