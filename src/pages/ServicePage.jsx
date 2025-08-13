@@ -4,6 +4,7 @@ import { useLocation, Link } from "react-router-dom";
 import { TbTransform } from "react-icons/tb";
 import AnimatedComponent from "../components/ui/AnimatedComponent";
 import "./../style/service.css";
+import UnderLine from "../components/ui/UnderLine";
 
 const ServicePage = () => {
   const location = useLocation();
@@ -104,6 +105,86 @@ const ServicePage = () => {
      },
    ];
 
+   const services2 = [
+    {
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 10V3L4 14h7v7l9-11h-7z"
+          />
+        </svg>
+      ),
+      title: "Electrical Engineering",
+      description:
+        "Power stations, substations, and medium to high voltage equipment solutions",
+    },
+    {
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          />
+        </svg>
+      ),
+      title: "Renewable Energy",
+      description: "Solar and sustainable energy systems for a greener future",
+    },
+    {
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+          />
+        </svg>
+      ),
+      title: "Infrastructure Development",
+      description: "Comprehensive infrastructure solutions for modern projects",
+    },
+    {
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+      title: "Smart Systems",
+      description: "Oil & gas automation and intelligent system integration",
+    },
+  ];
+
   const isHome = location.pathname === "/";
   const list = isHome ? services.slice(0, 6) : services;
 
@@ -142,8 +223,105 @@ const ServicePage = () => {
           ></div>
         ))}
       </div>
+       
 
-      <div className="relative z-0 container mx-auto px-4 py-20">
+      
+      <div className="relative z-0 container mx-auto px-4 my-20">
+        <div className=" relative  pt-20">
+         <div className="inline-block relative text-center w-full mb-16">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 blur-3xl opacity-30 animate-pulse"></div>
+            <h1 className="relative text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+              Our Core {" "}
+              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+                Services
+              </span>
+            </h1>
+          </div>
+
+          {/* Hexagon Grid Design */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Center Connection Lines */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-96 h-96 border border-blue-500/20 rounded-full"></div>
+              <div className="absolute w-64 h-64 border border-blue-400/20 rounded-full animate-pulse"></div>
+            </div>
+
+          
+          </div>
+        </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-20 ">
+              {services2.map((service, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center gap-8 ${
+                    index % 2 === 0
+                      ? "lg:pr-20"
+                      : "lg:pl-20 lg:flex-row-reverse"
+                  }`}
+                >
+                  {/* Hexagon Icon */}
+                  <div className="relative group">
+                    <div className="w-32 h-32 relative">
+                      {/* Hexagon Shape */}
+                      <div className="absolute inset-0">
+                        <svg viewBox="0 0 100 100" className="w-full h-full">
+                          <defs>
+                            <linearGradient
+                              id={`gradient-${index}`}
+                              x1="100%"
+                              y1="100%"
+                              x2="100%"
+                              y2="100%"
+                            >
+                              <stop offset="0%" stopColor="#3B82F6" />
+                              <stop offset="100%" stopColor="#1E40AF" />
+                            </linearGradient>
+                          </defs>
+                          <polygon
+                            // points="5,5 90,2 90,75 50,95 4,5 1,5"
+                            fill={`url(#gradient-${index})`}
+                            stroke="#3B82F6"
+                            strokeWidth="2"
+                            className="group-hover:stroke-blue-400 transition-all duration-500"
+                          />
+                        </svg>
+                      </div>
+
+                      {/* Icon */}
+                      <div className="absolute inset-0 flex items-center justify-center text-white">
+                        {service.icon}
+                      </div>
+
+                      {/* Glow Effect */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="size-28 bg-blue-500/30 rounded-full blur-2xl group-hover:w-28 group-hover:h-28 transition-all duration-500"></div>
+                      </div>
+                    </div>
+
+                    {/* Connection Line */}
+                    <div
+                      className={`absolute top-1/2 ${
+                        index % 2 === 0 ? "left-full w-20" : "right-full w-20"
+                      } h-[2px] bg-gradient-to-r from-blue-500/50 to-transparent -translate-y-1/2 hidden lg:block`}
+                    ></div>
+                  </div>
+
+                  {/* Content */}
+                  <div
+                    className={`flex-1 ${
+                      index % 2 === 0 ? "text-left" : "lg:text-right"
+                    }`}
+                  >
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
         {/* Header with Neon Effect */}
         <AnimatedComponent animationType="fade-down" dataAosDuration={800}>
           <div className="text-center my-20">

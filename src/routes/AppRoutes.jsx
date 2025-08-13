@@ -5,11 +5,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import Main from "../components/layouts/Main";
 // Pages
 import Hero from "../components/hero/Hero";
-import About from "../pages/AboutPage";
-import Contact from "../pages/Contact";
-// import MattSchool from "../pages/pages/MattSchool";
-// import MattFurnishing from "../pages/pages/MattFurnishing";
-// import MattModel from "../pages/pages/MattModel";
+
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import AboutUs from "../components/aboutUs/AboutUs";
@@ -47,7 +44,8 @@ const AppRoutes = () => {
   useEffect(() => {
     AOS.init({
       once: false, // Ensure the animation triggers every time it scrolls back into view
-      duration: 800, // Animation duration
+      duration: 100, // Animation duration
+
       easing: "ease-in-out",
     });
 
@@ -62,12 +60,7 @@ const AppRoutes = () => {
         <Route path="about" element={<AboutPage />} />
         <Route path="service" element={<ServicesPage />} />
         <Route path="project" element={<ProjectsPage />} />
-        {/* <Route path="pages">
-          <Route path="mattschool" element={<MattSchool />} />
-          <Route path="mattfurnishing" element={<MattFurnishing />} />
-          <Route path="mattmodel" element={<MattModel />} />
-        </Route> */}
-        {/* <Route path="contact" element={<Contact />} /> */}
+        <Route path="contact" element={<ContactPage />} />
       </Route>
       <Route path="*" element={<ErrorElement />} />
     </Routes>

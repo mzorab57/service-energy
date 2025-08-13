@@ -43,7 +43,7 @@ const ContactPage = () => {
         </svg>
       ),
       title: "Visit Us",
-      content: ["123 Solar Street", "Erbil, Kurdistan", "Iraq 44001"]
+      content: ["100m Street", "Erbil, Kurdistan", "Iraq 44001"]
     },
     {
       icon: (
@@ -52,7 +52,7 @@ const ContactPage = () => {
         </svg>
       ),
       title: "Call Us",
-      content: ["+964 750 123 4567", "+964 770 987 6543", "Mon-Sat: 9AM-6PM"]
+      content: ["+964 773 439 3298",  "Sat-Thu: 9AM-6PM"]
     },
     {
       icon: (
@@ -61,22 +61,19 @@ const ContactPage = () => {
         </svg>
       ),
       title: "Email Us",
-      content: ["info@solarkurdistan.com", "support@solarkurdistan.com", "24/7 Support"]
+      content: ["info@serviceenergy-iq.com",  "24/7 Support"]
     }
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: 'facebook', url: '#' },
-    { name: 'Twitter', icon: 'twitter', url: '#' },
-    { name: 'Instagram', icon: 'instagram', url: '#' },
-    { name: 'LinkedIn', icon: 'linkedin', url: '#' }
-  ];
+    { name: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/share/1BzcdEnWEp/"' },
+    { name: 'Instagram',icon: 'M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 111.25 1.25A1.25 1.25 0 0117.25 5.5M12 7a5 5 0 115 5 5 5 0 01-5-5m0 2a3 3 0 103 3 3 3 0 00-3-3z'}];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden py-20">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 -left-40 w-80 h-80 bg-yellow-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-0 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse delay-700"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primaryLighter/10 rounded-full blur-3xl"></div>
       </div>
@@ -88,9 +85,9 @@ const ContactPage = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 blur-3xl opacity-30 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 blur-3xl opacity-30 animate-pulse"></div>
             <h1 className="relative text-5xl md:text-7xl font-bold text-white mb-6">
-              Get In <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 bg-clip-text text-transparent">Touch</span>
+              Get In <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-primaryLighter bg-clip-text text-transparent">Touch</span>
             </h1>
           </div>
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
@@ -99,25 +96,25 @@ const ContactPage = () => {
           
           {/* Decorative Line */}
           <div className="flex items-center justify-center mt-8 gap-4">
-            <div className="h-[2px] w-20 bg-gradient-to-r from-transparent to-yellow-500"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
-            <div className="h-[2px] w-20 bg-gradient-to-l from-transparent to-yellow-500"></div>
+            <div className="h-[2px] w-20 bg-gradient-to-r from-transparent to-blue-500"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+            <div className="h-[2px] w-20 bg-gradient-to-l from-transparent to-blue-500"></div>
           </div>
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-4">
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-yellow-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/10"
+              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
             >
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-primaryLighter rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                   {info.icon}
                 </div>
                 
@@ -151,7 +148,7 @@ const ContactPage = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     placeholder="John Doe"
                   />
                 </div>
@@ -164,7 +161,7 @@ const ContactPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -178,7 +175,7 @@ const ContactPage = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     placeholder="+964 750 123 4567"
                   />
                 </div>
@@ -191,7 +188,7 @@ const ContactPage = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     placeholder="Solar Installation Inquiry"
                   />
                 </div>
@@ -205,7 +202,7 @@ const ContactPage = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
                   placeholder="Tell us about your solar energy needs..."
                 ></textarea>
               </div>
@@ -213,7 +210,7 @@ const ContactPage = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-xl hover:from-yellow-500 hover:to-orange-600 transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-yellow-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-gradient-to-r from-blue-400 to-primaryLighter text-black font-bold rounded-xl hover:from-blue-500 hover:to-primaryLighter transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center">
@@ -248,7 +245,7 @@ const ContactPage = () => {
             {/* Business Hours */}
             <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <svg className="w-6 h-6 mr-3 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 mr-3 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 Business Hours
@@ -265,7 +262,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex justify-between items-center py-3">
                   <span className="text-gray-300">Sunday</span>
-                  <span className="text-orange-500 font-semibold">Closed</span>
+                  <span className="text-primaryLighter font-semibold">Closed</span>
                 </div>
               </div>
             </div>
@@ -279,7 +276,7 @@ const ContactPage = () => {
                   <a
                     key={social.name}
                     href={social.url}
-                    className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-orange-500 hover:text-black transition-all duration-300 hover:scale-110"
+                    className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:bg-gradient-to-br hover:from-blue-400 hover:to-primaryLighter hover:text-black transition-all duration-300 hover:scale-110"
                   >
                     <span className="sr-only">{social.name}</span>
                     {/* Social Icon Placeholder */}

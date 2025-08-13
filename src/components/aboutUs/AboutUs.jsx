@@ -14,10 +14,11 @@ const AboutUs = () => {
       <img
         src="/assets/images/cloud-video.webp"
         alt="background image"
-        className="absolute -top-6 z-20 object-cover opacity-60 w-full h-56 rotate-180 brightness-50 "
+        className="absolute -top-0 z-10 object-cover opacity-60 w-full h-56 rotate-180 brightness-50 "
       />
-      <div className="h-24 absolute -top-6 w-full backdrop-blur-md  z-10"></div>
-      <div className="h-24 absolute -top-6 w-full bg-gradient-to-b from-black/50 via-black/10 to-transparent  z-20"></div>
+     
+      <div className="h-32 absolute -top-14 w-full backdrop-blur-lg  z-30"></div>
+      <div className="h-24 absolute -top-14 w-full bg-gradient-to-b from-black/90 via-black/80 to-transparent  z-30"></div>
 
       <div className="mb-16">
        

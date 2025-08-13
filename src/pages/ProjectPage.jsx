@@ -8,55 +8,80 @@ const ProjectPage = () => {
   const [filter, setFilter] = useState('all');
 
   const projects = [
-    {
-      id: 1,
-      title: "Installation and Test & Commission Switchgear 33KV",
-      description: "Complete solar power system installation for residential buildings",
-      image: "/assets/images/pro1.jpeg",
-      stats: { power: "500kW", savings: "40%", homes: "120+" },
-      category: "residential",
-      year: "2024",
-      location: "Erbil, Kurdistan",
-      duration: "1 months",
-      client: "Factory"
-    },
-    {
-      id: 2,
-      title: "",
-      description: "Large-scale solar installation for industrial facilities",
-      image: "/assets/images/about-solar-removebg-preview.png",
-      stats: { power: "2MW", savings: "60%", buildings: "50+" },
-      category: "commercial",
-      year: "2023",
-      location: "Sulaymaniyah",
-      duration: "12 months",
-      client: "Industrial Park"
-    },
-    {
-      id: 3,
-      title: "Smart Energy Management",
-      description: "Integrated solar and battery storage systems",
-      image: "/assets/images/about-solar-removebg-preview.png",
-      stats: { power: "750kW", efficiency: "95%", storage: "1MWh" },
-      category: "smart",
-      year: "2024",
-      location: "Duhok",
-      duration: "8 months",
-      client: "Tech Campus"
-    },
-    {
-      id: 4,
-      title: "Green Building Solutions",
-      description: "Sustainable energy solutions for modern architecture",
-      image: "/assets/images/about-solar-removebg-preview.png",
-      stats: { power: "1.5MW", reduction: "70%", projects: "80+" },
-      category: "green",
-      year: "2023",
-      location: "Kirkuk",
-      duration: "10 months",
-      client: "Eco Tower"
-    }
-  ];
+  {
+    id: 1,
+    title: "Installation and Test & Commission Switchgear 33KV",
+    description: "Complete solar power system installation for residential buildings",
+    image: "/assets/images/pro1.jpeg",
+    stats: { power: "500kW", savings: "40%", homes: "120+" },
+    category: "residential",
+    year: "2024",
+    location: "Erbil, Kurdistan",
+    duration: "1 months",
+    client: "Factory"
+  },
+  {
+    id: 2,
+    title: "Installation and Test  Cable MV 33KV ",
+    description: "Large-scale solar installation for industrial facilities",
+     image: "/assets/images/pro2.jpeg",
+    stats: { power: "2MW", savings: "60%", buildings: "50+" },
+    category: "commercial",
+    year: "2024",
+    location: "Iraq-Erbil",
+    duration: "3 months",
+    client: "City"
+  },
+  {
+    id: 3,
+    title: "Smart Energy Management Berkary",
+    description: "Integrated solar and battery storage systems",
+    image: "/assets/images/pro3.jpeg",
+    stats: { power: "25kW", efficiency: "95%", storage: "100A & 25A " },
+    category: "smart",
+    year: "2024",
+    location: "Iraq-Rania",
+    duration: "3 months",
+    client: "Mr.Alan"
+  },
+  {
+    id: 4,
+    title: "Green Building Solutions",
+    description: "Sustainable energy solutions for modern architecture",
+    image: "/assets/images/about-solar-removebg-preview.png",
+    stats: { power: "1.5MW", reduction: "70%", projects: "80+" },
+    category: "green",
+    year: "2023",
+    location: "Kirkuk",
+    duration: "10 months",
+    client: "Eco Tower"
+  },
+ 
+  {
+    id: 5,
+    title: "Installation and Test  Cable MV 33KV ",
+    description: "Large-scale solar installation for industrial facilities",
+     image: "/assets/images/pro2.jpeg",
+    stats: { power: "2MW", savings: "60%", buildings: "50+" },
+    category: "commercial",
+    year: "2024",
+    location: "Iraq-Erbil",
+    duration: "3 months",
+    client: "City"
+  },
+  {
+    id: 6,
+    title: "Installation and Test & Commission Switchgear 33KV",
+    description: "Complete solar power system installation for residential buildings",
+    image: "/assets/images/pro1.jpeg",
+    stats: { power: "500kW", savings: "40%", homes: "120+" },
+    category: "residential",
+    year: "2024",
+    location: "Erbil, Kurdistan",
+    duration: "1 months",
+    client: "Factory"
+  },
+];
 
   const categories = [
     { value: 'all', label: 'All Projects', icon: '🌟' },
@@ -256,10 +281,7 @@ const ProjectPage = () => {
                       ))}
                     </div>
 
-                    {/* CTA */}
-                    <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      View Project Details →
-                    </button>
+                   
                   </div>
 
                   {/* Decorative moving border (pure CSS) */}

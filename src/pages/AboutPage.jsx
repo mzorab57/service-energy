@@ -83,7 +83,7 @@ const AboutPage = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Projects Completed" },
     { number: "15+", label: "Years Experience" },
     { number: "50+", label: "Expert Engineers" },
     { number: "100%", label: "Client Satisfaction" },
@@ -206,35 +206,40 @@ const AboutPage = () => {
         </div>
 
         {/* Right Content - Interactive Stats */}
-        <div className="lg:col-span-5">
-          <div className="relative">
-            {/* 3D Card Effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl transform rotate-6 opacity-20"></div>
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl transform -rotate-6 opacity-20"></div>
-            
-            <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30">
-              <h3 className="text-2xl font-bold text-white text-center mb-8">Our Achievements</h3>
-              
-              <div className="grid grid-cols-2 gap-6">
-                {stats.map((stat, index) => (
-                  <div key={index} 
-                    className="group relative bg-blue-500/10 rounded-2xl p-6 hover:bg-blue-500/20 transition-all duration-500 hover:scale-105"
-                  >
-                    <div className="text-center">
-                      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-2">
-                        {stat.number}
-                      </div>
-                      <div className="text-sm text-gray-300">{stat.label}</div>
+       <div className="lg:col-span-5">
+                <div className="relative">
+                  {/* 3D Card Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl transform rotate-6 opacity-20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl transform -rotate-6 opacity-20"></div>
+
+                  <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30">
+                    <h3 className="text-2xl font-bold text-white text-center mb-8">
+                      Our Achievements
+                    </h3>
+
+                    <div className="grid grid-cols-2 gap-6">
+                      {stats.map((stat, index) => (
+                        <div
+                          key={index}
+                          className="group relative bg-blue-500/10 rounded-2xl p-4 lg:p-6 hover:bg-blue-500/20 transition-all duration-500 hover:scale-105"
+                        >
+                          <div className="text-center">
+                            <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-2 pr-5">
+                              {stat.number}
+                            </div>
+                            <div className="text-sm text-gray-300">
+                              {stat.label}
+                            </div>
+                          </div>
+
+                          {/* Hover Effect */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+                      ))}
                     </div>
-                    
-                    {/* Hover Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
