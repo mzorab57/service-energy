@@ -283,11 +283,11 @@ const ProjectPage = () => {
       {/* Project Detail Modal (simple show/hide, no framer-motion) */}
       {selectedProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/90 backdrop-blur-2xl"
+          className="fixed  inset-0 z-50 flex items-center justify-center px-4 bg-black/90 backdrop-blur-2xl"
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="relative max-w-4xl w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl overflow-hidden border border-gray-700"
+            className="relative h-[50rem] overflow-y-auto max-w-4xl w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl overflow-hidden border border-gray-700"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close */}
@@ -303,11 +303,11 @@ const ProjectPage = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Image */}
-              <div className="relative h-96 md:h-full bg-gradient-to-br from-blue-900/20 to-primary-900/20">
+              <div className="relative h-[20rem] md:h-full bg-gradient-to-br from-blue-900/20 to-primary-900/20">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-[20rem] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
               </div>
@@ -321,7 +321,7 @@ const ProjectPage = () => {
                   <span className="text-gray-400">{selectedProject.category}</span>
                 </div>
 
-                <h2 className="text-4xl font-bold text-white mb-4">
+                <h2 className="lg:text-4xl text-2xl font-bold text-white mb-4">
                   {selectedProject.title}
                 </h2>
 
