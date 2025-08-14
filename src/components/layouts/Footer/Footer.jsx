@@ -232,7 +232,8 @@ const Footer = () => {
               href="https://wa.me/9647701411893" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-yellow-500 hover:text-yellow-400 transition-colors"
+              className="text-blue-600 hover:text-primaryLighter transition-colors"
+
             >
               Al-Code
             </a>

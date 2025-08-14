@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import AnimatedComponent from "../../components/ui/AnimatedComponent";
+import AnimatedComponent from "../ui/AnimatedComponent";
 import { Link, useLocation } from "react-router-dom";
 import UnderLine from "../ui/UnderLine";
 
@@ -114,7 +114,29 @@ const ProjectSection = () => {
   };
 
   return (
-    <div className="py-20">
+    <div className="py-20 relative ">
+       {/* Add CSS animation */}
+      <style jsx>{`
+        @keyframes moveGradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 100% 50%;
+          }
+        }
+      `}</style>
+       {/* Gradient blobs */}
+        <div className="absolute inset-0 hidden lg:block">
+          <div
+            className="absolute top-16 left-1/4 w-[600px] h-[200px] bg-gradient-to-br from-blue-500/20 via-primary-500/20 to-transparent rounded-full blur-3xl"
+            style={{ animation: 'floatY 16s ease-in-out infinite' }}
+          />
+          <div
+            className="absolute bottom-20 right-10 w-[800px] h-[800px] bg-gradient-to-tl from-cyan-500/20 via-blue-500/20 to-transparent rounded-full blur-3xl"
+            style={{ animation: 'floatY 18s ease-in-out infinite', animationDelay: '0.6s' }}
+          />
+        </div>
       <div className="container mx-auto px-4 max-w-7xl">
         <h2 className="text-6xl font-bold text-center mb-20">
           <span className="text-white">Our</span>{" "}
@@ -126,6 +148,7 @@ const ProjectSection = () => {
 
         {/* Projects Container with Sticky Cards */}
         <div className="relative grid lg:grid-cols-2 gap-8" ref={containerRef}>
+          
           {displayedProjects.map((project, index) => (
             <div
               key={project.id}
@@ -209,7 +232,7 @@ const ProjectSection = () => {
 
                   {/* Decorative moving border */}
                   <div
-                    className="absolute inset-0 rounded-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0  rounded-3xl pointer-events-none "
                     style={{
                       background: 'linear-gradient(135deg, transparent 30%, rgba(59,130,246,0.3), transparent 70%)',
                       backgroundSize: '200% 200%',
@@ -227,7 +250,7 @@ const ProjectSection = () => {
           <Link to={'/project'} className="flex justify-center mt-12 lg:hidden">
             <button
               onClick={()=> window.scrollTo(0, 0)}
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transform hover:scale-105 transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-primary to-primaryLighter text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transform hover:scale-105 transition-all duration-300"
             >
               Show More Projects ({filteredProjects.length - 3} more)
             </button>
@@ -235,17 +258,7 @@ const ProjectSection = () => {
       
       </div>
 
-      {/* Add CSS animation */}
-      <style jsx>{`
-        @keyframes moveGradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          100% {
-            background-position: 100% 50%;
-          }
-        }
-      `}</style>
+     
     </div>
   );
 };

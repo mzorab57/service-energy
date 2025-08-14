@@ -45,7 +45,6 @@ const AppRoutes = () => {
     AOS.init({
       once: false, // Ensure the animation triggers every time it scrolls back into view
       duration: 100, // Animation duration
-
       easing: "ease-in-out",
     });
 

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useState } from 'react';
+
 import AnimatedComponent from '../components/ui/AnimatedComponent'; // rastakrdnawa ba rêyekay xot
 
 const ProjectPage = () => {

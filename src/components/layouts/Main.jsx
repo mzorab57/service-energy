@@ -12,7 +12,9 @@ const Main = () => {
   return (  
     <LazyComponent>
       <Navbar />
-      <main className="relative">
+      <main className=" ">
+
+        
         <Outlet />
       </main>
       <Footer />

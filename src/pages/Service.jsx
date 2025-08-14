@@ -107,6 +107,21 @@ const Service = () => {
   ];
   return (
     <section class="services-section " id="services">
+       {/* Gradient blobs */}
+        <div className="absolute inset-0 ">
+          <div
+            className="absolute top-16 left-1/4 w-[600px] h-[300px] bg-gradient-to-br from-blue-500/20 via-primary-500/20 to-transparent rounded-full blur-3xl"
+            style={{ animation: 'floatY 16s ease-in-out infinite' }}
+          />
+          <div
+            className="absolute top-1/2 left-1/2 w-[600px] h-[200px] bg-gradient-to-br from-blue-500/20 via-primary-500/20 to-transparent rounded-full blur-3xl"
+            style={{ animation: 'floatY 16s ease-in-out infinite' }}
+          />
+          <div
+            className="absolute bottom-20 right-10 w-[800px] h-[800px] bg-gradient-to-tl from-cyan-500/20 via-blue-500/20 to-transparent rounded-full blur-3xl"
+            style={{ animation: 'floatY 18s ease-in-out infinite', animationDelay: '0.6s' }}
+          />
+        </div>
       <div class="services-container">
         <div class="services-bg-elements">
           <div class="circuit-pattern"></div>
@@ -127,7 +142,7 @@ const Service = () => {
           <div class="services-grid">
             {location.pathname !== "/service" &&
               services.slice(0, 6).map((service, index) => (
-                <AnimatedComponent>
+                <AnimatedComponent animationType="fade-up" dataAosDuration={200} >
                 <div
                   key={index}
                   className={`service-card ${service.title
