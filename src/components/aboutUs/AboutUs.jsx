@@ -18,7 +18,7 @@ const AboutUs = () => {
       />
      
       <div className="h-32 absolute -top-14 w-full backdrop-blur-lg  z-30"></div>
-      <div className="h-24 absolute -top-14 w-full bg-gradient-to-b from-black/90 via-black/80 to-transparent  z-30"></div>
+      <div className="h-24 absolute -top-14 w-full bg-gradient-to-b from-black/70 via-black/60 to-transparent  z-30"></div>
 
       <div className="mb-16">
        
@@ -28,7 +28,7 @@ const AboutUs = () => {
 
 
           {/* Video Section */}
-          <AnimatedComponent>
+          <AnimatedComponent animationType="fadeInUp" dataAosDuration={500} >
             <div className=" w-full flex justify-center  relative">
               <div className="relative  overflow-hidden ">
                 <video
