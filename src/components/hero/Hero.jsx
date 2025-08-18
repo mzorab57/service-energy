@@ -77,7 +77,7 @@ const Hero = () => {
 
           <Lightning
             hue={220}
-            xOffset={0.2}
+            xOffset={0.3}
             speed={0.5}
             intensity={0.5}
             size={1}
